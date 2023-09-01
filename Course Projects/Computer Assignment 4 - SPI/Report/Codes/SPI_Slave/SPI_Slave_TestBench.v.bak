@@ -1,0 +1,199 @@
+`timescale 1ns/1ns
+
+module SPI_Slave_Test_Bench();
+
+reg CS, SCLK, SDI;
+
+wire SDO;
+wire [6 : 0]Red_Leds, Blue_Leds;
+
+Slave spi_slave(CS, SCLK, SDI, SDO, Red_Leds, Blue_Leds); 
+
+always #10 SCLK = ~SCLK;
+
+initial begin
+
+SCLK = 0; CS = 1;
+
+#20 CS = 0;  // RED LEDs = 0000001
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // RED LEDs = 0000010 
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // RED LEDs = 0000100 
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // RED LEDs = 0001000 
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // RED LEDs = 0010000 
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // RED LEDs = 0100000 
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // RED LEDs = 1000000 
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 CS = 1;
+
+#20 CS = 0;  // RED LEDs = 0000000 
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // Blue LEDs = 0000001
+#20 SDI = 1;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // Blue LEDs = 0000010 
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // Blue LEDs = 0000100 
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // Blue LEDs = 0001000 
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // Blue LEDs = 0010000 
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // Blue LEDs = 0100000 
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 SDI = 0;
+#20 CS = 1;
+
+#20 CS = 0;  // Blue LEDs = 1000000 
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 1;
+#20 CS = 1;
+
+#20 CS = 0;  // Blue LEDs = 0000000 
+#20 SDI = 1;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 SDI = 0;
+#20 CS = 1;
+
+repeat(1000) @(posedge SCLK);
+$stop;
+
+end
+
+endmodule

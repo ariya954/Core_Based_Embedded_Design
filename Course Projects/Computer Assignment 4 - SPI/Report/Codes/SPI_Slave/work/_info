@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/modelsim_ase
+vSlave
+Z0 !s110 1687442344
+!i10b 1
+!s100 8<0:YXeNMTCJY0XDEfOZ;1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Il0U]OQn84bS<kLXWJdB[M3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/modelsim_ase/Projects/SPI_Slave
+w1687442296
+8D:/modelsim_ase/Projects/SPI_Slave/Slave.v
+FD:/modelsim_ase/Projects/SPI_Slave/Slave.v
+!i122 38
+L0 1 32
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1687442344.000000
+!s107 D:/modelsim_ase/Projects/SPI_Slave/Slave.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/modelsim_ase/Projects/SPI_Slave/Slave.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@slave
+vSPI_Slave_Test_Bench
+R0
+!i10b 1
+!s100 oMPlEj693go8603UO34hT1
+R1
+I_LY>nn]^fT4<ko1SM<RKz0
+R2
+R3
+w1687442336
+8D:/modelsim_ase/Projects/SPI_Slave/SPI_Slave_TestBench.v
+FD:/modelsim_ase/Projects/SPI_Slave/SPI_Slave_TestBench.v
+!i122 39
+L0 3 197
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/modelsim_ase/Projects/SPI_Slave/SPI_Slave_TestBench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/modelsim_ase/Projects/SPI_Slave/SPI_Slave_TestBench.v|
+!i113 1
+R6
+R7
+n@s@p@i_@slave_@test_@bench
